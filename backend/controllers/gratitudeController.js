@@ -1,4 +1,6 @@
 const asyncHandler = require('express-async-handler')
+
+const Gratitude = require('../models/gratitudeModel')
 /*
  ****************************************
  **** get all gratitudes for a user 
@@ -7,7 +9,8 @@ const asyncHandler = require('express-async-handler')
  ****************************************
  */
 const getGratitude = asyncHandler( async (req,res) => {
-    res.status(200).json({message:'get gratitudes'})
+    const gratitudes = await Gratitude.find()
+    res.status(200).json(gratitudes)
 })
 
 /*
@@ -22,7 +25,11 @@ const setGratitude = asyncHandler(async (req,res) => {
         res.status(400)
         throw new Error("Please add a text field")
     }
-    res.status(200).json({message:'set gratitude'})
+
+    const gratitude = await Gratitude.create({
+        text: req.body.text
+    })
+    res.status(200).json(gratitude)
 })
 
 /*
@@ -33,7 +40,14 @@ const setGratitude = asyncHandler(async (req,res) => {
  ****************************************
  */
 const updateGratitude = asyncHandler(async (req,res) => {
-    res.status(200).json({message:`update gratitude ${req.params.id}`})
+    const gratitude = await Gratitude.findById(req.params.id)
+    if(!gratitude){
+        res.status(400)
+        throw new Error("gratitude not found")
+    }
+    const updatedGratitude = await Gratitude.findByIdAndUpdate(req.params.id, 
+        req.body,{new:true},)
+    res.status(200).json(updatedGratitude)
 })
 
 /*
@@ -44,7 +58,15 @@ const updateGratitude = asyncHandler(async (req,res) => {
  ****************************************
  */
 const deleteGratitude = asyncHandler(async (req,res) => {
-    res.status(200).json({message:`delete gratitude ${req.params.id}`})
+    const gratitude = await Gratitude.findById(req.params.id)
+    if(!gratitude){
+        res.status(400)
+        throw new Error("gratitude not found")
+    }
+
+    await gratitude.remove()
+
+    res.status(200).json({id: req.params.id})
 })
 module.exports = {
     getGratitude,
