@@ -1,6 +1,7 @@
 const asyncHandler = require('express-async-handler')
 
 const Gratitude = require('../models/gratitudeModel')
+const User = require('../models/userModel')
 /*
  ****************************************
  **** get all gratitudes for a user 
@@ -9,7 +10,7 @@ const Gratitude = require('../models/gratitudeModel')
  ****************************************
  */
 const getGratitude = asyncHandler( async (req,res) => {
-    const gratitudes = await Gratitude.find()
+    const gratitudes = await Gratitude.find({user:req.user.id})
     res.status(200).json(gratitudes)
 })
 
@@ -27,7 +28,8 @@ const setGratitude = asyncHandler(async (req,res) => {
     }
 
     const gratitude = await Gratitude.create({
-        text: req.body.text
+        text: req.body.text,
+        user: req.user.id,
     })
     res.status(200).json(gratitude)
 })
@@ -44,6 +46,16 @@ const updateGratitude = asyncHandler(async (req,res) => {
     if(!gratitude){
         res.status(400)
         throw new Error("gratitude not found")
+    }
+    const user = await User.findById(req.user.id)
+    if(!user){
+        res.status(401)
+        throw new Error('User not found')
+    }
+    // check user login
+    if(gratitude.user.toString()!== user.id){
+        res.status(401)
+        throw new Error('user not authorized')
     }
     const updatedGratitude = await Gratitude.findByIdAndUpdate(req.params.id, 
         req.body,{new:true},)
@@ -62,6 +74,17 @@ const deleteGratitude = asyncHandler(async (req,res) => {
     if(!gratitude){
         res.status(400)
         throw new Error("gratitude not found")
+    }
+
+    const user = await User.findById(req.user.id)
+    if(!user){
+        res.status(401)
+        throw new Error('User not found')
+    }
+    // check user login
+    if(gratitude.user.toString()!== user.id){
+        res.status(401)
+        throw new Error('user not authorized')
     }
 
     await gratitude.remove()

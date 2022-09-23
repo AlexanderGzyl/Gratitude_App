@@ -15,6 +15,6 @@ app.use(express.json())
 app.use(express.urlencoded({extended:false}))
 app.use(errorHandler)
 app.use('/api/gratitudes',require('./routes/gratitudeRoutes'))
-
+app.use('/api/users',require('./routes/userRoutes'))
 app.listen(port,() => console.log(`Server is running on port ${port}`))
 
