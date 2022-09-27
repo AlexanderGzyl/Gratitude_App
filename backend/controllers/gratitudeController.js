@@ -5,7 +5,7 @@ const User = require('../models/userModel')
 /*
  ****************************************
  **** get all gratitudes for a user 
-*****@route GET /api/goals 
+*****@route GET /api/gratitude
 *****@access Private
  ****************************************
  */
@@ -17,7 +17,7 @@ const getGratitude = asyncHandler( async (req,res) => {
 /*
  ****************************************
  **** set gratitude for a user 
-*****@route POST /api/goals 
+*****@route POST /api/ggratitudes 
 *****@access Private
  ****************************************
  */
@@ -37,7 +37,7 @@ const setGratitude = asyncHandler(async (req,res) => {
 /*
  ****************************************
  **** update gratitude for a user 
-*****@route UPDATE /api/goals/:id
+*****@route UPDATE /api/gratitudess/:id
 *****@access Private
  ****************************************
  */
@@ -47,13 +47,13 @@ const updateGratitude = asyncHandler(async (req,res) => {
         res.status(400)
         throw new Error("gratitude not found")
     }
-    const user = await User.findById(req.user.id)
-    if(!user){
+    
+    if(!req.user){
         res.status(401)
         throw new Error('User not found')
     }
     // check user login
-    if(gratitude.user.toString()!== user.id){
+    if(gratitude.user.toString()!== req.user.id){
         res.status(401)
         throw new Error('user not authorized')
     }
@@ -65,7 +65,7 @@ const updateGratitude = asyncHandler(async (req,res) => {
 /*
  ****************************************
  **** delete gratitude for a user 
-*****@route DELETE /api/goals/:id 
+*****@route DELETE /api/gratitudes/:id 
 *****@access Private
  ****************************************
  */
@@ -76,13 +76,13 @@ const deleteGratitude = asyncHandler(async (req,res) => {
         throw new Error("gratitude not found")
     }
 
-    const user = await User.findById(req.user.id)
-    if(!user){
+    
+    if(!req.user){
         res.status(401)
         throw new Error('User not found')
     }
     // check user login
-    if(gratitude.user.toString()!== user.id){
+    if(gratitude.user.toString()!== req.user.id){
         res.status(401)
         throw new Error('user not authorized')
     }
