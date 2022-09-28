@@ -1,7 +1,7 @@
 # Gratitude_App in progress
 
 ## About
-   A deliberately simple app made just in time for thanksgiving. The goal is to help people live happier lives by practicing the virtue of gratitude. 
+   A deliberately simple app made just in time for Thanksgiving. The goal is to help people live happier lives by practicing the virtue of gratitude. 
 ## Built with
   HTML,CSS, React, React-Router-Dom, axios, Redux, JWT, bcrypt, MongoDB, Node, Express, Mongoose
 
