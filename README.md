@@ -15,12 +15,5 @@
 - [ ] fix app styling
 - [ ] consider adding email notifications
 
-## Progress so far
 
-## Register
-![ezgif com-gif-maker (7)](https://user-images.githubusercontent.com/50504143/192879758-704527e8-94bd-42c2-914b-7948651010c2.gif)
-
-## Login, Interaction and Logout
-
-![ezgif com-gif-maker (8)](https://user-images.githubusercontent.com/50504143/192880555-1e22b556-a988-4d53-9f30-1ddc6de7f6a2.gif)
 
