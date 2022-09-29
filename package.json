@@ -21,7 +21,9 @@
     "mongoose": "^6.6.1"
   },
   "devDependencies": {
+    "chance": "^1.1.8",
     "concurrently": "^7.4.0",
+    "cypress": "^10.9.0",
     "nodemon": "^2.0.20"
   }
 }
