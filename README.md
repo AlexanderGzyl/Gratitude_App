@@ -9,12 +9,24 @@
 - [X] JWT Authentication and route protection
 - [X] Backend is RESTful
 - [X] User dashboard has gratitude list section
-- [ ] add Cypress tests
+- [ ] add more Cypress tests
 - [ ] fix form warnings
 - [ ] track daily gratitude streak
-- [ ] hook up stoic gratitude quote API
+- [ ] Create and hook up stoic gratitude quote API
 - [ ] fix app styling
 - [ ] consider adding email notifications
+
+## Registration with password check (and a helpful notification form google :) )
+![ezgif com-gif-maker (9)](https://user-images.githubusercontent.com/50504143/193356248-a4135d0c-f7b1-4c23-ac02-aceeb3055d38.gif)
+
+## Login
+![ezgif com-gif-maker (11)](https://user-images.githubusercontent.com/50504143/193357124-12289dfc-6d08-48ab-8d7e-90b9d71225fe.gif)
+
+
+## Adding to the journal
+![ezgif com-gif-maker (10)](https://user-images.githubusercontent.com/50504143/193356737-151045c4-abc1-42fb-a7b8-c1bd8c122d74.gif)
+
+![zeno](https://user-images.githubusercontent.com/50504143/193356977-995c3578-d8c4-425d-a94a-103e60fc45c2.png)
 
 
 
