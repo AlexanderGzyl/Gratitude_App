@@ -11,7 +11,8 @@
 - [X] User dashboard has gratitude list section
 - [ ] add more Cypress tests
 - [ ] fix form warnings
-- [ ] track daily gratitude streak
+- [ ] add how to page with some references to studies
+- [ ] track daily gratitude streak + add notification or graph data page
 - [ ] Create and hook up stoic gratitude quote API
 - [ ] fix app styling
 - [ ] consider adding email notifications
