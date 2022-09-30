@@ -9,7 +9,7 @@ function GratitudeItem({gratitude}){
             <div>
                 {new Date(gratitude.createdAt).toLocaleString('en-US')}
             </div>
-            <h2>{gratitude.text}</h2>
+            <div>{gratitude.text}</div>
             <button onClick={() => dispatch(deleteGratitude(gratitude._id))} className='close'>
         X
       </button>

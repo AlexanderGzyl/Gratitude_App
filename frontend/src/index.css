@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=BIZ+UDPGothic:wght@400;700&display=swap');
 
 * {
   margin: 0;
@@ -7,13 +7,15 @@
 }
 
 body {
-  font-family: 'Poppins', sans-serif;
+  font-family: 'BIZ+UDPGothic';
   height: 100vh;
+  background-color: #F7F1E2;
+  color:#275F90;
 }
 
 a {
   text-decoration: none;
-  color: #000;
+  color: #275F90;
 }
 
 p {
@@ -37,7 +39,7 @@ h3 {
 
 .container {
   width: 100%;
-  max-width: 960px;
+  
   margin: 0 auto;
   padding: 0 20px;
   text-align: center;
@@ -48,8 +50,9 @@ h3 {
   justify-content: space-between;
   align-items: center;
   padding: 20px 0;
-  border-bottom: 1px solid #e6e6e6;
+  border-bottom: 2px solid #275F90;
   margin-bottom: 60px;
+  font-size: 1.5rem;
 }
 
 .header ul {
@@ -68,7 +71,7 @@ h3 {
 }
 
 .header ul li a:hover {
-  color: #777;
+  color: #FFAA80;
 }
 
 .header ul li a svg {
@@ -83,20 +86,29 @@ h3 {
 }
 
 .heading p {
-  color: #828282;
+  color: #275F90;
+}
+.logo{
+  font-size: 2rem;
+  border-radius: 50%;
+  font-weight: bolder;
+  padding: 10px;
+  background-color: #FFAA80;
 }
 
 .gratitudes {
   display: grid;
-  grid-template-columns: repeat(2, 1fr);
+  grid-template-columns: repeat(1, 100%);
   gap: 10px;
 }
 
 .gratitude {
-  background-color: #f4f4f4;
+  background-color: #FFAA80;
   margin: 10px 0;
   padding: 20px 0 10px;
   position: relative;
+  word-wrap: break-word;
+
 }
 
 .gratitude .close {
@@ -110,7 +122,7 @@ h3 {
 
 .form,
 .content {
-  width: 70%;
+  width: 50%;
   margin: 0 auto;
 }
 
@@ -123,7 +135,7 @@ h3 {
 .form-group select {
   width: 100%;
   padding: 10px;
-  border: 1px solid #e6e6e6;
+  border: 1px solid #FFAA80;
   border-radius: 5px;
   margin-bottom: 10px;
   font-family: inherit;
@@ -137,10 +149,10 @@ h3 {
 
 .btn {
   padding: 10px 20px;
-  border: 1px solid #000;
+  border: 1px solid #275F90;
   border-radius: 5px;
-  background: #000;
-  color: #fff;
+  background: #275F90;
+  color: #FFAA80;
   font-size: 16px;
   font-weight: 700;
   cursor: pointer;
@@ -153,11 +165,6 @@ h3 {
 
 .btn svg {
   margin-right: 8px;
-}
-
-.btn-reverse {
-  background: #fff;
-  color: #000;
 }
 
 .btn-block {
@@ -175,7 +182,7 @@ h3 {
   right: 0;
   bottom: 0;
   left: 0;
-  background-color: rgba(0, 0, 0, 0.5);
+  background-color: rgba(0, 96, 152, 0.5);
   z-index: 5000;
   display: flex;
   justify-content: center;
