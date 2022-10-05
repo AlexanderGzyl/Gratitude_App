@@ -13,6 +13,8 @@
 - [ ] fix form warnings
 - [ ] add how to page with some references to studies
 - [ ] track daily gratitude streak + add notification or graph data page
+- [ ] add guided meditation function
+- [ ] add gratitude search functionality
 - [ ] Create and hook up stoic gratitude quote API
 - [ ] fix app styling
 - [ ] consider adding email notifications
