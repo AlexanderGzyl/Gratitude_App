@@ -16,7 +16,7 @@
 - [ ] add guided meditation function
 - [ ] add gratitude search functionality
 - [ ] Create and hook up stoic gratitude quote API
-- [ ] fix app styling
+- [ ] fix app styling and rethink ui
 - [ ] consider adding email notifications
 
 ## Registration with password check (and a helpful notification form google :) )
