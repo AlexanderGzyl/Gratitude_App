@@ -9,7 +9,7 @@
 - [X] JWT Authentication and route protection
 - [X] Backend is RESTful
 - [X] User dashboard has gratitude list section
-- [ ] add more Cypress tests
+- [ ] Increase test coverage
 - [ ] fix form warnings
 - [ ] add how to page with some references to studies
 - [ ] track daily gratitude streak + add notification or graph data page
